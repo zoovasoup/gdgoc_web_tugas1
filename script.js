@@ -45,14 +45,6 @@ function editTask(id) {
 }
 
 function addButton(element, id) {
-  const deleteButton = document.createElement("button");
-  deleteButton.textContent = "Delete";
-  deleteButton.classList.add("delete-button");
-  deleteButton.addEventListener("click", () => {
-    deleteTask(id);
-  });
-  element.appendChild(deleteButton);
-
   const editButton = document.createElement("button");
   editButton.textContent = "Edit";
   editButton.classList.add("edit-button");
@@ -60,4 +52,12 @@ function addButton(element, id) {
     buttonEdit(id);
   });
   element.appendChild(editButton);
+
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  deleteButton.classList.add("delete-button");
+  deleteButton.addEventListener("click", () => {
+    deleteTask(id);
+  });
+  element.appendChild(deleteButton);
 }
