@@ -54,8 +54,8 @@ function addButton(element, id) {
   element.appendChild(deleteButton);
 
   const editButton = document.createElement("button");
-  editButton.textContent = "edit";
-  editButton.classList.add("delete-button");
+  editButton.textContent = "Edit";
+  editButton.classList.add("edit-button");
   editButton.addEventListener("click", () => {
     buttonEdit(id);
   });
