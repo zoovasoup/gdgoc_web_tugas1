@@ -1,5 +1,5 @@
 <!-- Create a todo list -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,7 +17,9 @@
           id="tf-input"
           class="textfield"
         />
-        <button onclick="addTask()" class="button">Add Task</button>
+        <button onclick="addTask()" id="input-button" class="button">
+          Add Task
+        </button>
       </div>
       <div>
         <ul id="task-container">
@@ -25,6 +27,9 @@
             Task 1
             <button onclick="deleteTask('4344')" class="delete-button">
               Delete
+            </button>
+            <button onclick="editTask('4344')" class="delete-button">
+              edit
             </button>
           </li>
           <li id="4345" class="list-item">
