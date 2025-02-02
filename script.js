@@ -29,19 +29,24 @@ function buttonEdit(id) {
   buttonUpdate.textContent = "Update";
 
   buttonUpdate.onclick = () => {
-    editTask(id);
+    const task = document.getElementById(id);
+    const input = document.getElementById("tf-input");
+
+    task.textContent = input.value;
+
+    addButton(task, id);
+    document.getElementById("tf-input").value = "";
+    document.getElementById("tf-input").placeholder = "Enter a task";
+
+    resetButton();
   };
 }
 
-function editTask(id) {
-  const task = document.getElementById(id);
-  const input = document.getElementById("tf-input");
+function resetButton() {
+  const buttonUpdate = document.getElementById("input-button");
 
-  task.textContent = input.value;
-
-  addButton(task, id);
-  document.getElementById("tf-input").value = "";
-  document.getElementById("tf-input").placeholder = "Enter a task";
+  buttonUpdate.textContent = "Add Task";
+  buttonUpdate.onclick = addTask;
 }
 
 function addButton(element, id) {
